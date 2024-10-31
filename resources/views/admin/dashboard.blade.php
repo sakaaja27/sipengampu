@@ -18,21 +18,7 @@
                                                 </div>
                                                 <h6 class="text-white">Dosen</h6>
                                             </div>
-                                            <div class="card-tools me-n1">
-                                                <div class="dropdown">
-                                                    <a href="#"
-                                                        class="dropdown-toggle btn btn-icon btn-sm btn-trigger on-dark"
-                                                        data-bs-toggle="dropdown"><em class="icon ni ni-more-v"></em></a>
-                                                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
-                                                        <ul class="link-list-opt no-bdr">
-                                                            <li><a href="#" class="active"><span>15 Days</span></a>
-                                                            </li>
-                                                            <li><a href="#"><span>30 Days</span></a></li>
-                                                            <li><a href="#"><span>3 Months</span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                     </div><!-- .card-inner -->
                                     <div class="nk-ck-wrap mt-auto overflow-hidden rounded-bottom">
@@ -57,21 +43,7 @@
                                                     </div>
                                                     <h6 class="text-white">Mata Kuliah</h6>
                                                 </div>
-                                                <div class="card-tools me-n1">
-                                                    <div class="dropdown">
-                                                        <a href="#"
-                                                            class="dropdown-toggle btn btn-icon btn-sm btn-trigger on-dark"
-                                                            data-bs-toggle="dropdown"><em class="icon ni ni-more-v"></em></a>
-                                                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
-                                                            <ul class="link-list-opt no-bdr">
-                                                                <li><a href="#" class="active"><span>15 Days</span></a>
-                                                                </li>
-                                                                <li><a href="#"><span>30 Days</span></a></li>
-                                                                <li><a href="#"><span>3 Months</span></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
                                         </div><!-- .card-inner -->
                                         <div class="nk-cmwg1-ck mt-auto">
@@ -88,26 +60,10 @@
                                             <div class="flex-item">
                                                 <div class="text-white d-flex flex-wrap">
                                                     <span class="fs-2 me-1">{{ $total_prodi }}</span>
-                                                    <span class="align-self-end fs-14px pb-1"><em
-                                                            class="icon ni ni-arrow-long-up"></em>12.4%</span>
                                                 </div>
                                                 <h6 class="text-white">Program Studi</h6>
                                             </div>
-                                            <div class="card-tools me-n1">
-                                                <div class="dropdown">
-                                                    <a href="#"
-                                                        class="dropdown-toggle btn btn-icon btn-sm btn-trigger on-dark"
-                                                        data-bs-toggle="dropdown"><em class="icon ni ni-more-v"></em></a>
-                                                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
-                                                        <ul class="link-list-opt no-bdr">
-                                                            <li><a href="#" class="active"><span>15 Days</span></a>
-                                                            </li>
-                                                            <li><a href="#"><span>30 Days</span></a></li>
-                                                            <li><a href="#"><span>3 Months</span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                     </div><!-- .card-inner -->
                                     <div class="nk-ck-wrap mt-auto overflow-hidden rounded-bottom">
@@ -126,26 +82,10 @@
                                             <div class="flex-item">
                                                 <div class="text-white d-flex flex-wrap">
                                                     <span class="fs-2 me-1">{{ $totalpengampu }}</span>
-                                                    <span class="align-self-end fs-14px pb-1"><em
-                                                            class="icon ni ni-arrow-long-up"></em>12.4%</span>
                                                 </div>
                                                 <h6 class="text-white">Pengampu</h6>
                                             </div>
-                                            <div class="card-tools me-n1">
-                                                <div class="dropdown">
-                                                    <a href="#"
-                                                        class="dropdown-toggle btn btn-icon btn-sm btn-trigger on-dark"
-                                                        data-bs-toggle="dropdown"><em class="icon ni ni-more-v"></em></a>
-                                                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
-                                                        <ul class="link-list-opt no-bdr">
-                                                            <li><a href="#" class="active"><span>15 Days</span></a>
-                                                            </li>
-                                                            <li><a href="#"><span>30 Days</span></a></li>
-                                                            <li><a href="#"><span>3 Months</span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                     </div><!-- .card-inner -->
                                     {{-- <div class="nk-ck-wrap mt-auto overflow-hidden rounded-bottom">

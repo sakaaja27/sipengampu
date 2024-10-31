@@ -2,11 +2,11 @@
     <div class="container-xl wide-xl">
         <div class="nk-header-wrap">
             <div class="nk-menu-trigger d-xl-none ms-n1 me-3">
-                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+                <a href="{{ '/dashboard' }}" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
             </div>
             <div class="nk-header-brand d-xl-none">
-                <a href="/" class="logo-link">
-                    <img class="logo-light logo-img" src="{{ asset('images/logo/logo.png') }}" srcset="{{ asset('images/logo/logo.png') }} 2x" alt="logo">
+                <a href="{{ '/dashboard' }}" class="logo-link">
+                    <img class="logo-light logo-img" src="{{ asset('images/logo/logo.png') }}" srcset="{{ asset('images/logo/logo.png') }} 2x" alt="logo"><span class="m-2">TEACH MAP</span>
                     <img class="logo-dark logo-img" src="{{ asset('images/logo/logo.png') }}" srcset="{{ asset('images/logo/logo.png') }} 2x" alt="logo-dark">
                 </a>
             </div><!-- .nk-header-brand -->

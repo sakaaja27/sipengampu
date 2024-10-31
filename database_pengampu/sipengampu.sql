@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 31, 2024 at 05:15 AM
+-- Generation Time: Oct 31, 2024 at 03:53 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -57,7 +57,87 @@ INSERT INTO `cabang_ilmu` (`id`, `id_pohon`, `nama`, `created_at`, `updated_at`)
 (15, 8, 'PENGUJIAN PERANGKAT LUNAK', '2024-10-20 21:43:20', '04:43:20'),
 (16, 8, 'TEKNIK JARINGAN KOMPUTER', '2024-10-20 21:56:56', '04:57:14'),
 (17, 10, 'kosong', '2024-10-21 20:22:55', '03:22:55'),
-(18, 11, 'Kewarganegaraan', '2024-10-21 22:10:07', '05:10:07');
+(18, 11, 'Kewarganegaraan', '2024-10-21 22:10:07', '05:10:07'),
+(19, 1, 'APLIKASI PERANGKAT LUNAK SITUS', '2024-10-31 02:51:40', '09:51:40'),
+(20, 1, 'DUKUNGAN TEKNIS TEKNOLOGI INFORMASI', '2024-10-31 02:52:14', '09:52:14'),
+(21, 1, 'ILMU KOMPUTER ATAU INFORMATIKA', '2024-10-31 02:52:30', '09:52:30'),
+(22, 1, 'KEAMANAN SISTEM INFORMASI', '2024-10-31 02:52:49', '09:52:49'),
+(23, 1, 'KECERDASAN BUATAN', '2024-10-31 02:53:09', '09:53:09'),
+(24, 1, 'KECERDASAN BUATAN DAN ROBOTIK', '2024-10-31 02:53:24', '09:53:24'),
+(25, 1, 'LAYANAN INTERNET', '2024-10-31 02:53:37', '09:53:37'),
+(26, 1, 'MANAJEMEN BASIS DATA', '2024-10-31 02:53:53', '09:53:53'),
+(27, 1, 'PENGEMBANGAN APLIKASI BERGERAK', '2024-10-31 02:54:18', '09:54:18'),
+(28, 1, 'PENGEMBANGAN APLIKASI MULTIPLATFORM', '2024-10-31 02:54:44', '09:54:44'),
+(29, 1, 'PENGEMBANGAN PERANGKAT LUNAK SITUS', '2024-10-31 02:55:14', '09:55:14'),
+(30, 1, 'PERANCANGAN PERMAINAN', '2024-10-31 02:55:35', '09:55:35'),
+(31, 1, 'REKAYASA KEAMANAN SIBER', '2024-10-31 02:56:00', '09:56:00'),
+(32, 1, 'REKAYASA PERANGKAT LUNAK', '2024-10-31 02:56:20', '09:56:20'),
+(33, 1, 'REKAYASA PERANGKAT LUNAK APLIKASI', '2024-10-31 02:56:51', '09:56:51'),
+(34, 1, 'REKAYASA SISTEM KOMPUTER', '2024-10-31 02:57:04', '09:57:04'),
+(35, 1, 'REKAYASA TEKNOLOGI INFORMASI', '2024-10-31 02:58:12', '09:58:12'),
+(36, 1, 'SISTEM DAN TEKNOLOGI INFORMASI', '2024-10-31 02:58:36', '09:58:36'),
+(37, 1, 'SISTEM INFORMASI', '2024-10-31 02:58:57', '09:58:57'),
+(38, 1, 'TEKNIK PENGAMANAN SIBER', '2024-10-31 02:59:20', '09:59:20'),
+(39, 1, 'TEKNOLOGI INFORMASI', '2024-10-31 02:59:37', '09:59:37'),
+(40, 1, 'TEKNOLOGI KOMPUTER GRAFIS', '2024-10-31 02:59:52', '09:59:52'),
+(41, 1, 'TEKNOLOGI PERMAINAN', '2024-10-31 03:00:11', '10:00:11'),
+(42, 1, 'TEKNOLOGI REKAYASA KOMPUTER GRAFIS', '2024-10-31 03:00:31', '10:00:31'),
+(43, 1, 'TEKNOLOGI REKAYASA MULTIMEDIA', '2024-10-31 03:00:44', '10:00:44'),
+(44, 1, 'TEKNOLOGI REKAYASA MULTIMEDIA GRAFIS', '2024-10-31 03:00:56', '10:00:56'),
+(45, 1, 'TEKNOLOGI REKAYASA PERANGKAT LUNAK', '2024-10-31 03:01:08', '10:01:08'),
+(46, 4, 'STATISTIKA', '2024-10-31 03:02:04', '10:02:04'),
+(47, 4, 'STATISTIKA BISNIS', '2024-10-31 03:02:17', '10:02:17'),
+(48, 4, 'STATISTIKA TERAPAN', '2024-10-31 03:02:33', '10:02:33'),
+(49, 5, 'DESAIN GRAFIS', '2024-10-31 03:04:26', '10:04:26'),
+(50, 5, 'DESAIN INTERIOR', '2024-10-31 03:04:43', '10:04:43'),
+(51, 5, 'DESAIN KOMUNIKASI VISUAL', '2024-10-31 03:04:53', '10:04:53'),
+(52, 5, 'DESAIN MODE', '2024-10-31 03:05:06', '10:05:06'),
+(53, 5, 'DESAIN PRODUK', '2024-10-31 03:05:16', '10:05:16'),
+(54, 5, 'DESAIN PRODUK INDUSTRI', '2024-10-31 03:05:27', '10:05:27'),
+(55, 5, 'MULTIMEDIA', '2024-10-31 03:05:38', '10:05:38'),
+(56, 5, 'PENDIDIKAN PROFESI ARSITEK', '2024-10-31 03:05:51', '10:05:51'),
+(57, 5, 'PERCETAKAN', '2024-10-31 03:06:11', '10:06:11'),
+(58, 5, 'TEKNOLOGI CETAK', '2024-10-31 03:06:29', '10:06:29'),
+(59, 6, 'MANAJEMEN OPERASI BISNIS DIGITAL', '2024-10-31 03:06:54', '10:06:54'),
+(60, 6, 'OPERASIONALISASI PERKANTORAN DIGITAL', '2024-10-31 03:07:05', '10:07:05'),
+(61, 9, 'DESAIN MEDIA', '2024-10-31 03:08:09', '10:08:09'),
+(62, 9, 'DESAIN MEDIA KOMUNIKASI GRAFIS', '2024-10-31 03:08:21', '10:08:21'),
+(63, 9, 'FORENSIK DIGITAL DAN KEAMANAN SIBER', '2024-10-31 03:08:33', '10:08:33'),
+(64, 9, 'ILMU ATAU SAINS FORENSIK', '2024-10-31 03:09:39', '10:09:39'),
+(65, 9, 'ILMU ATAU SAINS KOMPUTASI', '2024-10-31 03:09:50', '10:09:50'),
+(66, 9, 'INFORMATIKA MEDIS ATAU INFORMATIKA KESEHATAN', '2024-10-31 03:10:00', '10:10:00'),
+(67, 9, 'INOVASI SISTEM DAN TEKNOLOGI', '2024-10-31 03:10:12', '10:10:12'),
+(68, 9, 'KOMUNIKASI GRAFIS', '2024-10-31 03:10:26', '10:10:26'),
+(69, 9, 'MULTI-MEDIA DIGITAL', '2024-10-31 03:10:40', '10:10:40'),
+(70, 9, 'PENDIDIKAN DIGITAL', '2024-10-31 03:11:47', '10:11:47'),
+(71, 9, 'REKAYASA SISTEM', '2024-10-31 03:11:58', '10:11:58'),
+(72, 9, 'SAINS DATA', '2024-10-31 03:12:11', '10:12:11'),
+(73, 9, 'SAINS DATA SPASIAL', '2024-10-31 03:12:22', '10:12:22'),
+(74, 9, 'SAINS DATA TERAPAN', '2024-10-31 03:12:32', '10:12:32'),
+(75, 9, 'SENI MEDIA DIGITAL', '2024-10-31 03:12:44', '10:12:44'),
+(77, 9, 'SISTEM INFORMASI AKUNTANSI', '2024-10-31 03:13:07', '10:13:07'),
+(78, 9, 'SISTEM INFORMASI BISNIS', '2024-10-31 03:13:18', '10:13:18'),
+(79, 9, 'SISTEM INFORMASI GEOGRAFIS', '2024-10-31 03:13:32', '10:13:32'),
+(80, 9, 'SISTEM SIBER-FISIK', '2024-10-31 03:13:42', '10:13:42'),
+(81, 9, 'TEKNIK ANIMASI DAN PERMAINAN 3D', '2024-10-31 03:13:56', '10:13:56'),
+(82, 9, 'TEKNIK CETAK DAN GRAFIS', '2024-10-31 03:14:14', '10:14:14'),
+(83, 9, 'TEKNIK PENGEMASAN', '2024-10-31 03:14:24', '10:14:24'),
+(84, 9, 'TEKNOLOGI CETAK DAN GRAFIS', '2024-10-31 03:14:34', '10:14:34'),
+(85, 9, 'TEKNOLOGI PENGEMASAN', '2024-10-31 03:14:45', '10:14:45'),
+(86, 9, 'TEKNOLOGI REKAYASA CETAK DAN GRAFIS 3 DIMENSI', '2024-10-31 03:14:55', '10:14:55'),
+(87, 7, 'PENDIDIKAN BAHASA DAN SASTRA INDONESIA', '2024-10-31 03:15:27', '10:15:27'),
+(88, 7, 'PENDIDIKAN BAHASA INDONESIA', '2024-10-31 03:15:37', '10:15:37'),
+(89, 7, 'PENDIDIKAN BAHASA INGGRIS', '2024-10-31 03:16:30', '10:16:30'),
+(90, 7, 'PENDIDIKAN BISNIS', '2024-10-31 03:16:53', '10:16:53'),
+(91, 7, 'PENDIDIKAN KOMPUTER ATAU INFORMATIKA', '2024-10-31 03:17:55', '10:17:55'),
+(92, 7, 'PENDIDIKAN MATEMATIKA', '2024-10-31 03:18:08', '10:18:08'),
+(93, 7, 'PENDIDIKAN SASTRA INDONESIA', '2024-10-31 03:18:18', '10:18:18'),
+(94, 7, 'PENDIDIKAN TEKNOLOGI INFORMASI', '2024-10-31 03:18:29', '10:18:29'),
+(95, 7, 'TEKNOLOGI PENDIDIKAN', '2024-10-31 03:18:41', '10:18:41'),
+(96, 8, 'TEKNOLOGI KOMPUTER', '2024-10-31 03:19:10', '10:19:10'),
+(97, 8, 'TEKNOLOGI REKAYASA INFORMATIKA INDUSTRI', '2024-10-31 03:19:30', '10:19:30'),
+(98, 8, 'TEKNOLOGI REKAYASA JARINGAN', '2024-10-31 03:19:41', '10:19:41'),
+(99, 8, 'TEKNOLOGI REKAYASA KOMPUTER', '2024-10-31 03:19:52', '10:19:52');
 
 -- --------------------------------------------------------
 
@@ -446,11 +526,11 @@ INSERT INTO `pohon_ilmu` (`id`, `id_rumpun`, `nama`, `created_at`, `updated_at`)
 (1, 1, 'Komputer', '2024-10-20 19:18:52', '04:32:56'),
 (3, 1, 'Logika', '2024-10-20 21:33:07', '04:33:07'),
 (4, 1, 'Matematika', '2024-10-20 21:33:17', '04:33:17'),
-(5, 3, 'Arsitektur,Dsesain dan Perencanaan Desain', '2024-10-20 21:33:45', '04:33:45'),
+(5, 3, 'Arsitektur,Desain dan Perencanaan Desain', '2024-10-20 21:33:45', '09:50:51'),
 (6, 3, 'Bisnis digital', '2024-10-20 21:33:59', '04:33:59'),
 (7, 3, 'Pendidikan', '2024-10-20 21:34:10', '04:34:10'),
 (8, 3, 'Teknik atau Rekayasa Komputer', '2024-10-20 21:34:29', '04:34:29'),
-(9, 3, 'Jenjang Keilmuan Multi,Inter atau Transdisiplin', '2024-10-20 21:39:49', '04:39:49'),
+(9, 3, 'Jejaring Keilmuan Multi, Inter, Atau Transdisiplin', '2024-10-20 21:39:49', '10:07:43'),
 (10, 6, 'kosong', '2024-10-21 20:05:30', '03:05:30'),
 (11, 1, 'Kewarganegaraan', '2024-10-21 22:09:51', '05:09:51');
 
@@ -587,7 +667,7 @@ INSERT INTO `tahun_akademik` (`id`, `tahun_ajaran`, `keterangan`, `status`, `cre
 CREATE TABLE `users` (
   `id` int NOT NULL,
   `id_prodi` int NOT NULL,
-  `nip` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `nip` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `nidn` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `glr_depan` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -625,9 +705,9 @@ INSERT INTO `users` (`id`, `id_prodi`, `nip`, `nama`, `nidn`, `glr_depan`, `glr_
 (14, 6, '198907102019031010', 'Ery Setiyawan Jullev Atmadji', '0010078903', '', 'S.Kom, M.Cs', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (15, 1, '198801172019031008', 'I Gede Wiryawan', '0017018808', '', 'S.Kom., M.Kom.', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (16, 6, '199408122019031013', 'Mukhamad Angga Gumilang', '0012089401', '', 'S. Pd., M. Eng.', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(17, 13, 'D198901152021041', 'Lukman Hakim', '0015018910', '', 'S.Kom., M.Kom.', NULL, 10, 17, NULL, '', '4', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(18, 1, 'D199305102021032', 'Lukie Perdanasari', '0010059304', '', 'S.Kom., M.T.', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(19, 6, 'D199308312021032', 'Arvita Agus Kurniasari', '0031089301', '', 'S.ST.,M.Tr.Kom', NULL, 10, 17, NULL, '', '4', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(17, 13, 'D198901152021041', 'Lukman Hakim', '0015018910', NULL, 'S.Kom., M.Kom.', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:17:51'),
+(18, 1, 'D199305102021032', 'Lukie Perdanasari', '0010059304', NULL, 'S.Kom., M.T.', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:19:12'),
+(19, 6, 'D199308312021032', 'Arvita Agus Kurniasari', '0031089301', NULL, 'S.ST.,M.Tr.Kom', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:18:29'),
 (20, 6, '198106152006041002', 'Syamsul Arifin', '0015068202', '', 'S.Kom, M.Cs', NULL, 10, 17, NULL, 'Penata/III', '2', 4, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (21, 4, '19710408 2001121003', 'Wahyu Kurnia Dewanto', '0008047103', '', ' S.Kom, MT', NULL, 10, 17, NULL, 'Penata/III', '2', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (22, 4, '198302032006041003', 'Hendra Yufit Riskiawan', '0003028302', '', 'S.Kom, M.Cs', NULL, 10, 17, NULL, 'Penata/III', '2', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -638,10 +718,10 @@ INSERT INTO `users` (`id`, `id_prodi`, `nip`, `nama`, `nidn`, `glr_depan`, `glr_
 (29, 4, '19880702 201903 1 01', 'Husin', '0002078803', '', 'S.Kom, M.MT', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (31, 4, '199104292019031011', 'Faisal Lutfi Afriansyah', '0029049102', '', 'S.Kom, MT', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (32, 4, '198804042020122013', 'Pramuditha Shinta Dewi Puspitasari', '0004039801', '', 'S.Kom., M.Kom.', NULL, 10, 17, NULL, '', '4', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(33, 4, '197306172018051001', 'Ely Mulyadi', '0017067306', '', 'SE, M.Kom', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(33, 4, '197306172018051001', 'Ely Mulyadi', '0017067306', NULL, 'SE, M.Kom', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '3', 5, 'd41d8cd98f00b204e9800998ecf8427e', '0000-00-00 00:00:00', '2024-10-31 08:16:57'),
 (36, 6, '198907102019031010', 'Ery Setiyawan Jullev Atmadji', 'S.Kom, M.Cs', '', 'S.Kom, M.Cs', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (38, 6, '199408122019031013', 'Mukhamad Angga Gumilang', '0012089401', '', 'S. Pd., M. Eng.', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(40, 1, '12345678910', 'Muhammad Hafidh Firmansyah', '', '', 'S.Tr.Kom., M.Sc.', NULL, 10, 17, NULL, '', '4', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(40, 1, '12345678910', 'Muhammad Hafidh Firmansyah', '12345678910', NULL, 'S.Tr.Kom., M.Sc.', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:13:30'),
 (41, 1, '197907032003121001', 'Surateno', '0003077902', NULL, 'S.Kom., M.Kom', NULL, 10, 17, NULL, 'Pembina/IV', '1', 5, '202cb962ac59075b964b07152d234b70', '0000-00-00 00:00:00', '2024-10-13 07:41:58'),
 (42, 1, '197808172003121005', 'Agus Hariyanto', '0017087804', '', 'ST, M.Kom', NULL, 10, 17, NULL, 'Pembina/IV', '1', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (43, 1, '197011282003121001', 'Hariyono Rakhmad', '0028117002', '', 'S.Pd, M.Kom', NULL, 10, 17, NULL, 'Penata Tk.', '1', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -653,15 +733,15 @@ INSERT INTO `users` (`id`, `id_prodi`, `nip`, `nama`, `nidn`, `glr_depan`, `glr_
 (49, 1, '198510312018031001', 'Victor Phoa', '0031108503', '', 'S.Si, M.Cs', NULL, 10, 17, NULL, 'Penata Mud', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (50, 1, '199411232020122010', 'Lalitya Nindita Sahenda', '0023119402', '', 'S.Pd., M.T', NULL, 10, 17, NULL, '', '4', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (51, 13, '198606092008122004', 'Nanik Anita Mukhlisoh', '0009068601', '', 'S.ST, MT', NULL, 10, 17, NULL, 'Penata', '2', 2, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(52, 8, 'D199510302021032', 'Puji Hastuti', '0030109502', '', 'ST., M.Eng', NULL, 10, 17, NULL, '', '4', 5, 'd41d8cd98f00b204e9800998ecf8427e', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(53, 8, 'D199405092021032', 'Qonitatul Hasanah', '0009059403', '', 'S.ST., M.Tr.T', NULL, 10, 17, NULL, '', '4', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(54, 8, 'D199310092021031', 'Raditya Arief Pratama', '0009109304', '', 'S.Kom., M.Eng', NULL, 10, 17, NULL, '', '4', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(52, 8, 'D199510302021032', 'Puji Hastuti', '0030109502', NULL, 'ST., M.Eng', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:21:14'),
+(53, 8, 'D199405092021032', 'Qonitatul Hasanah', '0009059403', NULL, 'S.ST., M.Tr.T', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:19:48'),
+(54, 8, 'D199310092021031', 'Raditya Arief Pratama', '0009109304', NULL, 'S.Kom., M.Eng', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:20:44'),
 (55, 8, '199706282022032018', 'Ulfa Emi Rahmawati', '0028069702', '', 'S.Kom., M.Kom.', NULL, 10, 17, NULL, '', '4', 2, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (56, 9, '197110092003121001', 'Denny Trias Utomo', '0009107104', 'DR.', 'S.Si, MT', NULL, 10, 17, NULL, 'Penata Tk.', '2', 2, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(57, 6, '199305082022032013', 'Dia Bitari Mei Yuana', '0008059304', '', 'S.ST., M.Tr.Kom.', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(58, 9, 'PKD.199440423202105', 'Mochammad Rifki Ulil Albab', '0023049404', '', 'ST., M.Tr.T.', NULL, 10, 17, NULL, '', '3', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(59, 9, 'PKD.19931124202105', 'Sholihah Ayu Wulandari', '0024119301', '', ' S.ST., M.Tr.T.', NULL, 10, 17, NULL, '', '4', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(60, 9, 'PKD.19920803202105', 'Ahmad Fahriyannur Rosyady', '0003089203', '', ' S.Kom., M.MT', NULL, 10, 17, NULL, '', '4', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(57, 6, '199305082022032013', 'Dia Bitari Mei Yuana', '0008059304', NULL, 'S.ST., M.Tr.Kom.', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:22:21'),
+(58, 9, 'PKD.199440423202105', 'Mochammad Rifki Ulil Albab', '0023049404', NULL, 'ST., M.Tr.T.', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '3', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:23:03'),
+(59, 9, 'PKD.19931124202105', 'Sholihah Ayu Wulandari', '0024119301', NULL, 'S.ST., M.Tr.T.', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:23:36'),
+(60, 9, 'PKD.19920803202105', 'Ahmad Fahriyannur Rosyady', '0003089203', NULL, 'S.Kom., M.MT', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '0000-00-00 00:00:00', '2024-10-31 08:24:10'),
 (71, 1, '197009292003121001', 'Yogiswara', '', '', '', NULL, 10, 17, NULL, '', '2', 1, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (72, 4, '198903292019031007', 'Taufiq Rizaldi', '0029058906', NULL, 'S.ST., MT', NULL, 10, 17, NULL, 'VVIB', '3', 3, 'd41d8cd98f00b204e9800998ecf8427e', '0000-00-00 00:00:00', '2024-10-10 04:11:19'),
 (73, 6, '199212272022031007', 'Choirul Huda', '0027129205', '', 'S.Kom., M.Kom.', NULL, 10, 17, NULL, 'Penata/III', '6', 5, '827ccb0eea8a706c4c34a16891f84e7b', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -669,7 +749,21 @@ INSERT INTO `users` (`id`, `id_prodi`, `nip`, `nama`, `nidn`, `glr_depan`, `glr_
 (98, 1, '111', '1', '111', '1', '1', NULL, 10, 17, NULL, '1', '1', 1, 'c4ca4238a0b923820dcc509a6f75849b', '2024-10-08 21:15:20', '2024-10-08 21:15:20'),
 (100, 1, '123', 'TESTING V2', '123', 'Ir', 'tr', 'Matematika', 1, 2, 'Politeknik Negeri Malang', 'VVIC', '4', 5, '01677a6ba542c1b664deb29548cc75cf', '2024-10-11 20:23:17', '2024-10-21 21:02:53'),
 (105, 1, 'finaltestingv2', 'Sakav2', 'finaltestingv2', 'Ir.', 'M.Cs', 'Teknik Komputer', 5, 6, 'Universitas Brawijaya', 'C', '1', 5, '01677a6ba542c1b664deb29548cc75cf', '2024-10-21 21:24:56', '2024-10-21 21:26:53'),
-(106, 1, 'finaltestingv3', 'Sakav3', 'finaltestingv3', 'Ir.', 'M.Cs', 'Teknik Komputer', 1, 1, 'Universitas Brawijaya', 'C', '1', 5, 'd41d8cd98f00b204e9800998ecf8427e', '2024-10-21 21:54:19', '2024-10-21 22:05:17');
+(106, 1, 'finaltestingv3', 'Sakav3', 'finaltestingv3', 'Ir.', 'M.Cs', 'Teknik Komputer', 1, 1, 'Universitas Brawijaya', 'C', '1', 5, 'd41d8cd98f00b204e9800998ecf8427e', '2024-10-21 21:54:19', '2024-10-21 22:05:17'),
+(107, 6, 'Afis Asryullah Pratama', 'Afis Asryullah Pratama', 'Afis Asryullah Pratama', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, 'd41d8cd98f00b204e9800998ecf8427e', '2024-10-31 08:28:19', '2024-10-31 08:28:36'),
+(108, 1, 'Khen Dedes', 'Khen dedes', 'Khen Dedes', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:29:27', '2024-10-31 08:29:27'),
+(110, 1, 'Mauthauddin Mustaqim', 'Mauthauddin Mustaqim', 'Mauthauddin Mustaqim', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:33:18', '2024-10-31 08:33:18'),
+(111, 5, 'Reza Putra Pradana', 'Reza Putra Pradana', 'Reza Putra Pradana', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:33:59', '2024-10-31 08:46:30'),
+(112, 4, 'Akas Bagus Setiawan', 'Akas Bagus Setiawan', 'Akas Bagus Setiawan', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, 'd41d8cd98f00b204e9800998ecf8427e', '2024-10-31 08:34:59', '2024-10-31 08:35:23'),
+(113, 6, 'Fatimatuzzahra', 'Fatimatuzzahra', 'Fatimatuzzahra', NULL, 'M.Kom', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:35:59', '2024-10-31 08:49:09'),
+(114, 13, 'Mas\'ud Hermansyah', 'Mas\'ud Hermansyah', 'Mas\'ud Hermansyah', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:37:18', '2024-10-31 08:37:18'),
+(116, 13, 'David Juli Ariadi', 'David Juli Ariadi', 'David Juli Ariadi', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:39:31', '2024-10-31 08:39:31'),
+(117, 13, 'Prisilia Angel Tantri', 'Prisilia Angel Tantri', 'Prisilia Angel Tantri', NULL, 'SE,M.M', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, 'd41d8cd98f00b204e9800998ecf8427e', '2024-10-31 08:40:17', '2024-10-31 08:40:36'),
+(118, 13, 'Rizky Adhitya Nugroho', 'Rizky Adhitya Nugroho', 'Rizky Adhitya Nugroho', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:41:16', '2024-10-31 08:41:16'),
+(119, 13, 'Muhammad Bahanan', 'Muhammad Bahanan', 'Muhammad Bahanan', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, 'd41d8cd98f00b204e9800998ecf8427e', '2024-10-31 08:41:53', '2024-10-31 08:42:09'),
+(120, 13, 'Mujiono', 'Mujiono', 'Mujiono', NULL, '-', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:42:37', '2024-10-31 08:42:37'),
+(121, 1, 'Dhony Manggala Putra', 'Dhony Manggala Putra', 'Dhony Manggala Putra', NULL, 'SE,M.M', 'Teknik Informatika', 10, 17, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:43:22', '2024-10-31 08:43:22'),
+(122, 1, 'Muhammad Ainul Fikri', 'Muhammad Ainul Fikri', 'Muhammad Ainul Fikri', NULL, 'S.T,M.Eng', 'Teknik Informatika', 7, 12, 'Politeknik Negeri Jember', '-', '4', 5, '25d55ad283aa400af464c76d713c07ad', '2024-10-31 08:44:06', '2024-10-31 08:51:19');
 
 -- --------------------------------------------------------
 
@@ -683,9 +777,9 @@ CREATE TABLE `view_matakuliah` (
 ,`nama` varchar(255)
 ,`nama_prodi` varchar(255)
 ,`semester` int
-,`status` int
-,`tot_praktik` int
 ,`tot_teori` int
+,`tot_praktik` int
+,`status` int
 );
 
 -- --------------------------------------------------------
@@ -695,14 +789,14 @@ CREATE TABLE `view_matakuliah` (
 -- (See below for the actual view)
 --
 CREATE TABLE `view_pengampu_` (
-`created_at` timestamp
-,`id` int
-,`id_dosen` int
-,`id_matkul` int
-,`id_prodi` int
+`id` int
 ,`id_tahun_akademik` int
-,`status_ajaran` int
+,`id_prodi` int
+,`id_matkul` int
+,`id_dosen` int
 ,`status_dosen` varchar(20)
+,`status_ajaran` int
+,`created_at` timestamp
 ,`updated_at` timestamp
 );
 
@@ -713,18 +807,18 @@ CREATE TABLE `view_pengampu_` (
 -- (See below for the actual view)
 --
 CREATE TABLE `v_dosen` (
-`glr_belakang` varchar(100)
-,`glr_depan` varchar(100)
-,`golongan` varchar(10)
-,`id` int
-,`jabatan` varchar(255)
+`id` int
 ,`nama` varchar(255)
-,`nama_jabatan` varchar(50)
-,`nama_prodi` varchar(255)
+,`nip` varchar(50)
 ,`nidn` varchar(50)
-,`nip` varchar(20)
-,`password` varchar(255)
+,`glr_depan` varchar(100)
+,`glr_belakang` varchar(100)
+,`golongan` varchar(10)
+,`jabatan` varchar(255)
 ,`status_pegawai` int
+,`password` varchar(255)
+,`nama_prodi` varchar(255)
+,`nama_jabatan` varchar(50)
 );
 
 -- --------------------------------------------------------
@@ -852,7 +946,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cabang_ilmu`
 --
 ALTER TABLE `cabang_ilmu`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT for table `dosen_rumpun`
@@ -930,7 +1024,7 @@ ALTER TABLE `tahun_akademik`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 
 --
 -- Constraints for dumped tables

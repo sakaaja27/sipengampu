@@ -21,7 +21,7 @@ class DosenController extends Controller
     function store(Request $request){
         $request->validate([
             'id_prodi' => 'required',
-            'nip' => 'required|max:20|unique:users,nip',
+            'nip' => 'required|max:50|unique:users,nip',
             'nidn' => 'required|unique:users,nidn',
             'glr_depan'=> 'max:20',
             'nama' => 'required|max:255',

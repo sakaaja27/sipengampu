@@ -23,8 +23,6 @@
                                                 Add Data
                                             </button>
                                         </li>
-                                        <li class="nk-block-tools-opt"><a href="#" class="btn btn-primary"><em
-                                                    class="icon ni ni-reports"></em><span>Reports</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -203,7 +201,7 @@
                     @method('PUT')
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Edit Admin</h4>
+                            <h4 class="modal-title">Edit Dosen</h4>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
