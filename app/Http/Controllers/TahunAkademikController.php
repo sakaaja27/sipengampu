@@ -17,7 +17,7 @@ class TahunAkademikController extends Controller
     function store(Request $request)
     {
         $request->validate([
-            'tahun_ajaran' => 'required',
+            'tahun_ajaran' => 'required|unique:tahun_akademik,tahun_ajaran',
             'keterangan' => 'required',
             'status' => 'required',
 
@@ -27,8 +27,11 @@ class TahunAkademikController extends Controller
         return redirect()->route('tahunakademik.index')->with('success', 'Data Berhasil di Input!');
     }
 
-    function update(Request $request)
+    function update(Request $request,$id)
     {
+        $request->validate([
+            'tahun_ajaran' => 'required|unique:tahun_akademik,tahun_ajaran,' . $id,
+        ]);
         $data = TahunAkademik::where('id', $request->id)->first();
         $data->tahun_ajaran = $request->input('tahun_ajaran');
         $data->keterangan = $request->input('keterangan');
