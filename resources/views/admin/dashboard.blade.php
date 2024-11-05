@@ -38,8 +38,7 @@
                                                 <div class="flex-item">
                                                     <div class="text-white d-flex flex-wrap">
                                                         <span class="fs-2 me-1">{{ $matakuliah }}</span>
-                                                        <span class="align-self-end fs-14px pb-1"><em
-                                                                class="icon ni ni-arrow-long-up"></em>12.4%</span>
+                                                       
                                                     </div>
                                                     <h6 class="text-white">Mata Kuliah</h6>
                                                 </div>
