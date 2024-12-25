@@ -91,7 +91,7 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Mata Kuliah</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="matakuliah" method="post">
+                <form action="{{route('matakuliah.store')}}" method="post">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group" hidden>

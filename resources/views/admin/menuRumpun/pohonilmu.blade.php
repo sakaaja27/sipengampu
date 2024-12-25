@@ -74,7 +74,7 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Pohon</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="pohonilmu" method="post">
+                <form action="{{route('pohonilmu.store')}}" method="post">
                     <div class="modal-body">
                         @csrf
                         <div class="form-group" hidden>

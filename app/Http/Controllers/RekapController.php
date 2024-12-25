@@ -22,22 +22,38 @@ class RekapController extends Controller
 
     public function index(Request $request)
     {
-        $tahun_id = $request->input('tahun_akademik'); // Get the selected value from the request
+        $tahun_id = $request->input('tahun_akademik');
+        $prodi_id = $request->input('prodi');
 
-        $pengampu = Pengampu::with('matkul', 'prodi', 'dosen', 'tahun', 'pohonilmu', 'cabangilmu')->whereHas('tahun', function ($query) use ($tahun_id) {
-            $query->where('id', $tahun_id); // Use the selected value to filter the results
-        })->get();
-        // dd($tahun_id);
-        // dd($pengampu);
+        $query = Pengampu::with('matkul', 'prodi', 'dosen', 'tahun', 'pohonilmu', 'cabangilmu');
 
-        // Return data in JSON format
+        // Filter Tahun Akademik
+        if ($tahun_id) {
+            $query->whereHas('tahun', function ($q) use ($tahun_id) {
+                $q->where('id', $tahun_id);
+            });
+        }
 
+        // Filter Prodi
+        if ($prodi_id) {
+            $query->whereHas('prodi', function ($q) use ($prodi_id) {
+                $q->where('id', $prodi_id);
+            });
+        }
 
-        // $pengampu = Pengampu::with('matkul', 'prodi', 'dosen', 'tahun')->whereHas('tahun', function ($query) {
-        //     $query->where('id', 1);
-        // })->get();
+        $pengampu = $query->get();
 
-        // $datas = DB::table('view_pengampu_')->where('status_ajaran','=', 1)->get(); 
+        // $pengampu = Pengampu::with('matkul', 'prodi', 'dosen', 'tahun', 'pohonilmu', 'cabangilmu')
+        //     ->whereHas('tahun', function ($query) use ($tahun_id) {
+        //         $query->where('id', $tahun_id);
+        //     })
+        //     ->when($prodi_id, function ($query) use ($prodi_id) {
+        //         return $query->whereHas('prodi', function ($subQuery) use ($prodi_id) {
+        //             $subQuery->where('id', $prodi_id);
+        //         });
+        //     })
+        //     ->get();
+
         $tahun = TahunAkademik::all();
         $datatahun = TahunAkademik::all();
         $munculprodi = Prodi::all();
@@ -163,7 +179,7 @@ class RekapController extends Controller
         foreach ($total_kjm_sks_teori as $nip => $nama_prodi_values) {
             foreach ($nama_prodi_values as $nama_prodi => $total_sks) {
                 foreach ($jabatan as $jbtn) {
-                    $total_uang_teori[$nip][$nama_prodi] = $total_sks * $jbtn->nominal * 14;
+                    $total_uang_teori[$nip][$nama_prodi] = $total_sks * $jbtn->nominal * 12;
                 }
             }
         }
@@ -206,7 +222,10 @@ class RekapController extends Controller
     // }
 
     public function export(Request $request)
-{
-    return Excel::download(new RekapExport($request->tahun_akademik), 'rekap_kjm_' . date('Y-m-d') . '.xlsx');
-}
+    {
+        return Excel::download(
+            new RekapExport($request->tahun_akademik, $request->prodi),
+            'rekap_data' . date('Y-m-d') . '.xlsx'
+        );
+    }
 }

@@ -93,7 +93,7 @@
     {{-- modal add data --}}
     <div class="modal fade" id="modal">
         <div class="modal-dialog modal-lg">
-            <form action="dosen" method="POST">
+            <form action="{{route('dosen.store')}}" method="POST">
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header">

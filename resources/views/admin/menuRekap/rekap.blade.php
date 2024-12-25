@@ -20,18 +20,33 @@
                             <div class="row">
                                 <div class="form-group col-md-6 col-sm-12">
                                     <label>Tahun Akademik</label>
-                                    <select class="form-control select2 filter" style="width: 100%;" name="tahun_akademik"
-                                        id="tahun_akademik" onchange="filterTahunAkademik(this.value)">
+                                    <select class="form-control select2" style="width: 100%;" name="tahun_akademik"
+                                        id="tahun_akademik">
+                                        <option value="">Semua Tahun</option>
                                         @foreach ($tahun as $th)
-                                            <option value="{{ $th->id }}">{{ $th->tahun_ajaran }}
-                                                {{ $th->keterangan }}</option>
+                                            <option value="{{ $th->id }}">
+                                                {{ $th->tahun_ajaran }} {{ $th->keterangan }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label>Program Studi</label>
+                                    <select class="form-control select2" style="width: 100%;" name="prodi"
+                                        id="prodi">
+                                        <option value="">Semua Prodi</option>
+                                        @foreach ($munculprodi as $prod)
+                                            <option value="{{ $prod->id }}">{{ $prod->nama }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6 col-sm-12 mt-md-4 mt-sm-4">
-                                    <button type="submit" name="export" class="btn btn-success"><i
-                                            class="fa fa-file-excel"></i> Download</button>
-
+                                    <button type="submit" name="export" class="btn btn-success">
+                                        <i class="fa fa-file-excel"></i> Download
+                                    </button>
+                                    <button type="button" id="refresh" class="btn btn-secondary ml-2">
+                                        Reset Filter
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -130,7 +145,7 @@
                                                         style="min-width: 60px; vertical-align: middle;">
                                                         {{ $loop->iteration }}</td>
                                                     <td class="p-2" style="min-width: 350px; vertical-align: middle;">
-                                                        {{ $ngampu->dosen->nama ?? ''}}
+                                                        {{ $ngampu->dosen->nama ?? '' }}
                                                     </td>
                                                     @foreach ($jabatan as $jbtn)
                                                         @if ($ngampu->dosen->jabatan == $jbtn->id)
@@ -291,7 +306,7 @@
                                                                     @foreach ($jabatan as $jbtn)
                                                                         @if ($ngampu->dosen->jabatan == $jbtn->id)
                                                                             <td class="p-0 text-center">
-                                                                                {{ 'Rp ' . number_format((array_sum($nama_prodi_values_teori) + array_sum($nama_prodi_values_praktik)) * $jbtn->nominal * 14, 2, ',', '.') }}
+                                                                                {{ 'Rp ' . number_format((array_sum($nama_prodi_values_teori) + array_sum($nama_prodi_values_praktik)) * $jbtn->nominal * 12, 2, ',', '.') }}
                                                                             </td>
                                                                         @endif
                                                                     @endforeach
@@ -333,33 +348,77 @@
 
     <script>
         $(document).ready(function() {
+            // Fungsi filter tahun akademik
+            function filterTahunAkademik(tahun_id) {
+                $.ajax({
+                    type: 'GET',
+                    url: '{{ route('rekap.index') }}',
+                    data: {
+                        tahun_akademik: tahun_id,
+                        prodi: $('#prodi').val() // Pertahankan filter prodi
+                    },
+                    success: function(data) {
+                        // Update tabel
+                        $('#myTable').html($(data).find('#myTable').html());
+
+                        // Hancurkan dan inisialisasi ulang DataTable
+                        if ($.fn.DataTable.isDataTable('#myTable')) {
+                            $('#myTable').DataTable().destroy();
+                        }
+                        $('#myTable').DataTable();
+
+                        // Update form ekspor
+                        $('form[action="{{ route('rekap.export') }}"] select[name="tahun_akademik"]')
+                            .val(tahun_id);
+                    }
+                });
+            }
+
+            // Fungsi filter prodi
+            function filterProdi(prodi_id) {
+                $.ajax({
+                    type: 'GET',
+                    url: '{{ route('rekap.index') }}',
+                    data: {
+                        tahun_akademik: $('#tahun_akademik').val(), // Pertahankan filter tahun
+                        prodi: prodi_id
+                    },
+                    success: function(data) {
+                        // Update tabel
+                        $('#myTable').html($(data).find('#myTable').html());
+
+                        // Hancurkan dan inisialisasi ulang DataTable
+                        if ($.fn.DataTable.isDataTable('#myTable')) {
+                            $('#myTable').DataTable().destroy();
+                        }
+                        $('#myTable').DataTable();
+
+                        // Update form ekspor
+                        $('form[action="{{ route('rekap.export') }}"] select[name="prodi"]')
+                            .val(prodi_id);
+                    }
+                });
+            }
+
+            // Event handler untuk dropdown
+            $('#tahun_akademik').on('change', function() {
+                filterTahunAkademik($(this).val());
+            });
+
+            $('#prodi').on('change', function() {
+                filterProdi($(this).val());
+            });
+
+            // Tombol reset (opsional)
             $('#refresh').on('click', function() {
+                $('#tahun_akademik').val(''); // Reset dropdown tahun
+                $('#prodi').val(''); // Reset dropdown prodi
+
+                // Reload halaman atau panggil fungsi filter dengan parameter kosong
                 filterTahunAkademik('');
+                filterProdi('');
             });
         });
-
-
-        function filterTahunAkademik(tahun_id) {
-            $.ajax({
-                type: 'GET',
-                url: '{{ route('rekap.index') }}',
-                data: {
-                    tahun_akademik: tahun_id
-                },
-                success: function(data) {
-                    // Update the table with the new data
-                    $('#myTable').html($(data).find('#myTable').html());
-
-                    // Hancurkan instance DataTable yang ada
-                    $('#myTable').DataTable().destroy();
-
-                    var table = $('#myTable').DataTable();
-                    // Update form ekspor dengan tahun akademik yang dipilih
-                    $('form[action="{{ route('rekap.export') }}"] select[name="tahun_akademik"]').val(tahun_id);
-
-                }
-            });
-        }
     </script>
 
     {{-- API --}}

@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashDosenController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\DosenRumpunController;
+use App\Http\Controllers\GolonganMahasiswaController;
 use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MatkulController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\RekapController;
 use App\Http\Controllers\RumpunController;
 use App\Http\Controllers\TahunAkademikController;
+use App\Http\Controllers\TeknisiController;
 use App\Models\DosenRumpun;
 use Illuminate\Support\Facades\Route;
 
@@ -64,6 +66,24 @@ Route::middleware('auth')->group(function () {
         Route::get('/dosen/{id}/delete', 'destroy')->name('dosen.delete');
         // export
         Route::get('users/export/', [DosenController::class, 'export']);
+    });
+
+    // Teknisi
+    Route::controller(TeknisiController::class)->middleware('only_admin')->group(function () {
+       Route::get('/teknisi', 'index')->name('teknisi.index'); 
+       Route::post('/teknisi', 'store')->name('teknisi.store');
+       Route::get('/teknisi/{id}/edit', 'edit')->name('teknisi.edit');
+       Route::put('/teknisi/{id}/edit', 'update')->name('teknisi.update');
+       Route::get('/teknisi/{id}/delete', 'destroy')->name('teknisi.delete');
+    });
+
+    // Golongan mahasiswa
+    Route::controller(GolonganMahasiswaController::class)->middleware('only_admin')->group(function () {
+        Route::get('/golongan_mahasiswa', 'index')->name('golongan_mahasiswa.index');
+        Route::post('/golongan_mahasiswa', 'store')->name('golongan_mahasiswa.store');
+        Route::get('/golongan_mahasiswa/{id}/edit', 'edit')->name('golongan_mahasiswa.edit');
+        Route::put('/golongan_mahasiswa/{id}/edit', 'update')->name('golongan_mahasiswa.update');
+        Route::get('/golongan_mahasiswa/{id}/delete', 'destroy')->name('golongan_mahasiswa.delete');   
     });
 
     // Jabatan

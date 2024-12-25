@@ -95,7 +95,7 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Pengampu</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="pengampu" method="post">
+                <form action="{{route('pengampu.store')}}" method="post">
                     @csrf
                     <div class="modal-body" style="overflow-y: auto; max-height: 500px;">
                         <div class="form-group" hidden>

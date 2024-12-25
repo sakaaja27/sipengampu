@@ -11,8 +11,7 @@ use Illuminate\Support\Facades\DB;
 class DosenController extends Controller
 {
     function index()  {
-        $datas = Dosen::with('prodi','jabatan')->where('status_pegawai', '!=', 1)->get();
-        // $datas = DB::table('users')->with('prodi')->where('status_pegawai','!=',1)->get();
+        $datas = Dosen::with('prodi','jabatan')->where('status_pegawai', '!=', 1)->orderBy('id', 'desc')->get();
         $prodi = Prodi::all();
         $jabatan = Jabatan::all();
         return view('admin.menuDosen.dosen',compact('datas','prodi','jabatan'));

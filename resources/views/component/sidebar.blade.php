@@ -49,6 +49,14 @@
                                              class="nk-menu-text">Dosen</span></a>
                                  </li>
                                  <li class="nk-menu-item">
+                                    <a href="{{ '/teknisi' }}" class="nk-menu-link"><span
+                                            class="nk-menu-text">Teknisi</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="{{ '/golongan_mahasiswa' }}" class="nk-menu-link"><span
+                                            class="nk-menu-text">Golongan Mahasiswa</span></a>
+                                </li>
+                                 <li class="nk-menu-item">
                                      <a href="{{ '/jabatan' }}" class="nk-menu-link"><span
                                              class="nk-menu-text">Jabatan</span></a>
                                  </li>

@@ -76,7 +76,7 @@
     {{-- Modal Add --}}
     <div class="modal fade" id="modal">
         <div class="modal-dialog modal-lg">
-            <form action="admin" method="POST">
+            <form action="{{route('admin.store')}}" method="POST">
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header">
