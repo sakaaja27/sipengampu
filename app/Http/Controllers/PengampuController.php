@@ -10,6 +10,7 @@ use App\Models\Pengampu;
 use App\Models\PohonIlmu;
 use App\Models\Prodi;
 use App\Models\TahunAkademik;
+use App\Models\Teknisi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -32,8 +33,9 @@ class PengampuController extends Controller
         $prodi = Prodi::all();
         $matkul = Matkul::all();
         $dosen = Dosen::all();
+        $teknisi = Teknisi::all();
 
-        return view('admin.menuPengampu.pengampu', compact('datas', 'tahun', 'prodi', 'matkul', 'dosen', 'datatahun', 'dataprodi', 'datamatkul', 'datadosen', 'golonganmahasiswa'));
+        return view('admin.menuPengampu.pengampu', compact('datas', 'tahun', 'prodi', 'matkul', 'dosen', 'datatahun', 'dataprodi', 'datamatkul', 'datadosen', 'golonganmahasiswa','teknisi'));
     }
 
     function store(Request $request)
@@ -43,6 +45,7 @@ class PengampuController extends Controller
             'id_prodi' => 'required',
             'kode_matkul' => 'required',
             'id_golongan' => 'required',
+            'id_teknisi' => 'required',
             'nip_dosen' => 'required',
             'status_dosen' => 'required',
         ]);
@@ -52,6 +55,7 @@ class PengampuController extends Controller
         $pengampu->id_prodi = $request->id_prodi;
         $pengampu->id_matkul = $request->kode_matkul;
         $pengampu->id_golongan = $request->id_golongan;
+        $pengampu->id_teknisi = $request->id_teknisi;
         $pengampu->id_dosen = $request->nip_dosen;
         $pengampu->status_dosen = $request->status_dosen;
         $pengampu->save();
@@ -67,6 +71,7 @@ class PengampuController extends Controller
         $data->id_prodi = $request->input('id_prodi');
         $data->id_matkul = $request->input('id_matkul');
         $data->id_golongan = $request->input('id_golongan');
+        $data->id_teknisi = $request->input('id_teknisi');
         $data->id_dosen = $request->input('id_dosen');
         $data->status_dosen = $request->input('status_dosen');
         $data->save();

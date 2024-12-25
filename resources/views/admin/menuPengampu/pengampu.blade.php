@@ -44,6 +44,7 @@
                                     <th>Gol Mahasiswa</th>
                                     <th>NIP Dosen</th>
                                     <th>Nama Dosen</th>
+                                    <th>Nama Teknisi</th>
                                     <th>Status Dosen</th>
                                     <th>Action</th>
                                 </tr>
@@ -60,6 +61,7 @@
                                         <td>{{ $data->golonganmahasiswa->nama ?? '' }}</td>
                                         <td>{{ $data->dosen->nip ?? '' }}</td>
                                         <td>{{ $data->dosen->nama ?? '' }}</td>
+                                        <td>{{ $data->teknisi->nama ?? '' }}</td>
                                         <td>
                                             @if ($data->status_dosen == 1)
                                                 <span>Koordinator Matkul</span>
@@ -103,58 +105,89 @@
                             <label>ID</label>
                             <input type="text" class="form-control" placeholder="id" name="id">
                         </div>
-                        <div class="form-group">
-                            <label>Tahun Akademik</label>
-                            <select class="form-control select2" placeholder="tahun akademik" name="id_tahun_akademik">
-                                @foreach ($tahun as $tahun)
-                                    <option value="{{ $tahun->id }}">{{ $tahun->tahun_ajaran }}
-                                        {{ $tahun->keterangan }}</option>
-                                @endforeach
-                            </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Tahun Akademik</label>
+                                    <select class="form-control select2" placeholder="tahun akademik" name="id_tahun_akademik">
+                                        <option value="">Pilih Tahun Akademik</option>
+                                        @foreach ($tahun as $tahun)
+                                            <option value="{{ $tahun->id }}">{{ $tahun->tahun_ajaran }} {{ $tahun->keterangan }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Prodi</label>
+                                    <select class="form-control select2" placeholder="prodi" name="id_prodi">
+                                        <option value="">Pilih Prodi</option>
+                                        @foreach ($prodi as $prodi)
+                                            <option value="{{ $prodi->id }}">{{ $prodi->nama }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Prodi</label>
-                            <select class="form-control select2" placeholder="prodi" name="id_prodi">
-                                @foreach ($prodi as $prodi)
-                                    <option value="{{ $prodi->id }}">{{ $prodi->nama }}</option>
-                                @endforeach
-                            </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Dosen</label>
+                                    <select class="form-control select2" placeholder="Dosen" name="nip_dosen">
+                                        <option value="">Pilih dosen</option>
+                                        @foreach ($dosen as $dosen)
+                                            <option value="{{ $dosen->id }}">{{ $dosen->nip }} - {{ $dosen->nama }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Kode Matkul</label>
+                                    <select class="form-control select2" placeholder="Mata kuliah" name="kode_matkul">
+                                        <option value="">Pilih mata kuliah</option>
+                                        @foreach ($matkul as $matkul)
+                                            <option value="{{ $matkul->id }}">{{ $matkul->kode }} - {{ $matkul->nama }} - Semester {{$matkul->semester}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Dosen</label>
-                            <select class="form-control select2" placeholder="Dosen" name="nip_dosen">
-                                @foreach ($dosen as $dosen)
-                                    <option value="{{ $dosen->id }}">{{ $dosen->nip }} - {{ $dosen->nama }}
-                                    </option>
-                                @endforeach
-                            </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Golongan Kelas Mahasiswa</label>
+                                    <select class="form-control select2" placeholder="Mata kuliah" name="id_golongan">
+                                        <option value="">Pilih golongan mahasiswa</option>
+                                        @foreach ($golonganmahasiswa as $gol)
+                                            <option value="{{ $gol->id }}">{{ $gol->nama }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Teknisi</label>
+                                    <select class="form-control select2" placeholder="Teknisi" name="id_teknisi">
+                                        <option value="">Pilih teknisi</option>
+                                        @foreach ($teknisi as $tknisi)
+                                            <option value="{{ $tknisi->id }}">{{ $tknisi->nip }} - {{ $tknisi->nama }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Kode Matkul</label>
-                            <select class="form-control select2" placeholder="Mata kuliah" name="kode_matkul">
-                                @foreach ($matkul as $matkul)
-                                    <option value="{{ $matkul->id }}">{{ $matkul->kode }} - {{ $matkul->nama }} - Semester {{$matkul->semester}}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Golongan Kelas Mahasiswa</label>
-                            <select class="form-control select2" placeholder="Mata kuliah" name="id_golongan">
-                                @foreach ($golonganmahasiswa as $gol)
-                                    <option value="{{ $gol->id }}">{{ $gol->nama }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">Status Dosen</label>
-                            <select class="form-control select2" placeholder="Status Dosen" name="status_dosen">
-                                <option value="1">Koordinator Matkul</option>
-                                <option value="2">Team Teamteaching Matkul</option>
-                                <option value="3">Tidak ada</option>
-                            </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Status Dosen</label>
+                                    <select class="form-control select2" placeholder="Status Dosen" name="status_dosen">
+                                        <option value="1">Koordinator Matkul</option>
+                                        <option value="2">Team Teamteaching Matkul</option>
+                                        <option value="3">Tidak ada</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer justify-content-end">
@@ -199,97 +232,121 @@
     @endforeach --}}
 
     @foreach ($datas as $data)
-        <div class="modal fade" id="modaledit-{{ $data->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data Pengampu</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <form action="{{ route('pengampu.update', $data->id) }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <div class="modal-body" style="overflow-y: auto; max-height: 500px;">
-                            <div class="form-group" hidden>
-                                <label>ID</label>
-                                <input type="text" class="form-control" placeholder="id" name="id"
-                                    value="{{ $data->id }}">
-                            </div>
-                            <div class="form-group">
-                                <label>Tahun Akademik</label>
-                                <select class="form-control select2" placeholder="tahun akademik"
-                                    name="id_tahun_akademik">
-                                    @foreach ($datatahun as $dthn)
-                                        <option value="{{ $dthn->id }}"
-                                            {{ $data->id_tahun_akademik == $dthn->id ? 'selected' : '' }}>
-                                            {{ $dthn->tahun_ajaran }} - {{ $dthn->keterangan }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Prodi</label>
-                                <select class="form-control select2" placeholder="prodi" name="id_prodi">
-                                    @foreach ($dataprodi as $prod)
-                                        <option value="{{ $prod->id }}"
-                                            {{ $data->id_prodi == $prod->id ? 'selected' : '' }}>
-                                            {{ $prod->nama }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Dosen</label>
-                                <select class="form-control select2" placeholder="Dosen" name="id_dosen">
-                                    @foreach ($datadosen as $dsn)
-                                        <option value="{{ $dsn->id }}"
-                                            {{ $data->id_dosen == $dsn->id ? 'selected' : '' }}>
-                                            {{ $dsn->nama }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Kode Matkul</label>
-                                <select class="form-control select2" placeholder="Mata kuliah" name="id_matkul">
-                                    @foreach ($datamatkul as $mtkl)
-                                        <option value="{{ $mtkl->id }}"
-                                            {{ $data->id_matkul == $mtkl->id ? 'selected' : '' }}>
-                                            {{ $mtkl->kode }} : {{ $mtkl->nama }} - Semester {{$matkul->semester}}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Golongan Kelas Mahasiswa</label>
-                                <select class="form-control select2" placeholder="Golongan Kelas Mahasiswa" name="id_golongan">
-                                    @foreach ($golonganmahasiswa as $gol)
-                                        <option value="{{ $gol->id }}"
-                                            {{ $data->id_golongan == $gol->id ? 'selected' : '' }}>
-                                            {{ $gol->nama }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Status Dosen</label>
-                                <select class="form-control select2" placeholder="Status Dosen" name="status_dosen">
-                                    @foreach ([1 => 'Koordinator Matkul', 2 => 'Team Teamteaching Matkul', 3 => 'Tidak Ada'] as $value => $text)
-                                        <option value="{{ $value }}"
-                                            {{ $data->status_dosen == $value ? 'selected' : '' }}>{{ $text }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="modal-footer justify-content-end">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>
-                        </div>
-                    </form>
+    <div class="modal fade" id="modaledit-{{ $data->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data Pengampu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <form action="{{ route('pengampu.update', $data->id) }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <div class="modal-body" style="overflow-y: auto; max-height: 500px;">
+                        <div class="form-group" hidden>
+                            <label>ID</label>
+                            <input type="text" class="form-control" placeholder="id" name="id" value="{{ $data->id }}">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Tahun Akademik</label>
+                                    <select class="form-control select2" placeholder="tahun akademik" name="id_tahun_akademik">
+                                        @foreach ($datatahun as $dthn)
+                                            <option value="{{ $dthn->id }}" {{ $data->id_tahun_akademik == $dthn->id ? 'selected' : '' }}>
+                                                {{ $dthn->tahun_ajaran }} - {{ $dthn->keterangan }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Prodi</label>
+                                    <select class="form-control select2" placeholder="prodi" name="id_prodi">
+                                        @foreach ($dataprodi as $prod)
+                                            <option value="{{ $prod->id }}" {{ $data->id_prodi == $prod->id ? 'selected' : '' }}>
+                                                {{ $prod->nama }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Dosen</label>
+                                    <select class="form-control select2" placeholder="Dosen" name="id_dosen">
+                                        @foreach ($datadosen as $dsn)
+                                            <option value="{{ $dsn->id }}" {{ $data->id_dosen == $dsn->id ? 'selected' : '' }}>
+                                                {{ $dsn->nip }} - {{ $dsn->nama }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Kode Matkul</label>
+                                    <select class="form-control select2" placeholder="Mata kuliah" name="id_matkul">
+                                        @foreach ($datamatkul as $mtkl)
+                                            <option value="{{ $mtkl->id }}" {{ $data->id_matkul == $mtkl->id ? 'selected' : '' }}>
+                                                {{ $mtkl->kode }} : {{ $mtkl->nama }} - Semester {{$mtkl->semester}}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Golongan Kelas Mahasiswa</label>
+                                    <select class="form-control select2" placeholder="Golongan Kelas Mahasiswa" name="id_golongan">
+                                        @foreach ($golonganmahasiswa as $gol)
+                                            <option value="{{ $gol->id }}" {{ $data->id_golongan == $gol->id ? 'selected' : '' }}>
+                                                {{ $gol->nama }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Teknisi</label>
+                                    <select class="form-control select2" placeholder="Teknisi" name="id_teknisi">
+                                        @foreach ($teknisi as $tknisi)
+                                        <option value="{{ $tknisi->id }}" {{ $data->id_teknisi == $tknisi->id ? 'selected' : '' }}>
+                                            {{ $tknisi->nip }} - {{ $tknisi->nama }}
+                                        </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Status Dosen</label>
+                                    <select class="form-control select2" placeholder="Status Dosen" name="status_dosen">
+                                        @foreach ([1 => 'Koordinator Matkul', 2 => 'Team Teamteaching Matkul', 3 => 'Tidak Ada'] as $value => $text)
+                                            <option value="{{ $value }}" {{ $data->status_dosen == $value ? 'selected' : '' }}>
+                                                {{ $text }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-end">
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
     @endforeach
     {{-- end --}}
 

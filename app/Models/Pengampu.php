@@ -47,5 +47,9 @@ class Pengampu extends Model
         return $this->belongsTo(GolonganMahasiswa::class, 'id_golongan', 'id');
     }
 
+    public function teknisi(){
+        return $this->belongsTo(Teknisi::class, 'id_teknisi', 'id');
+    }
+
   
 }
