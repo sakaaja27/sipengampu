@@ -12,6 +12,7 @@ class JabatanController extends Controller
         return view('admin.menuJabatan.jabatan',compact('datas'));
     }
 
+    
     function store(Request $request){
         $request->validate([
             'nama' => 'required|max:255|unique:jabatan,nama',

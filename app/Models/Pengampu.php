@@ -43,5 +43,9 @@ class Pengampu extends Model
         return $this->belongsTo(CabangIlmu::class, 'id_cabang', 'id');
     }
 
+    public function golonganmahasiswa(){
+        return $this->belongsTo(GolonganMahasiswa::class, 'id_golongan', 'id');
+    }
+
   
 }

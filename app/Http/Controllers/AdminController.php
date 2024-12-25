@@ -16,7 +16,7 @@ class AdminController extends Controller
         // $datas = DB::table('v_dosen')->whereNotIn('status_pegawai', [5])->get();
         $datas = Dosen::with('prodi')
             ->whereNotIn('status_pegawai', [5])
-            ->orderBy('id', 'desc') // Descending berdasarkan ID
+            ->orderBy('id', 'desc') 
             ->get();
         $prodi = Prodi::all();
         $jabatan = Jabatan::all();

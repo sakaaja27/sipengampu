@@ -23,7 +23,7 @@
                                                 Add Data
                                             </button>
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>
@@ -41,6 +41,7 @@
                                     <th>Kode Matkul</th>
                                     <th>Nama Matkul</th>
                                     <th>Semester Matkul</th>
+                                    <th>Gol Mahasiswa</th>
                                     <th>NIP Dosen</th>
                                     <th>Nama Dosen</th>
                                     <th>Status Dosen</th>
@@ -52,11 +53,11 @@
                                     <tr>
                                         <th>{{ $loop->iteration }}</th>
                                         <td>{{ $data->tahun->tahun_ajaran }} {{ $data->tahun->keterangan }}</td>
-                                        
                                         <td>{{ $data->prodi->nama ?? '' }}</td>
                                         <td>{{ $data->matkul->kode ?? '' }}</td>
-                                        <td>{{ $data->matkul->nama ?? ''}}</td>
+                                        <td>{{ $data->matkul->nama ?? '' }}</td>
                                         <td>{{ $data->matkul->semester ?? '' }}</td>
+                                        <td>{{ $data->golonganmahasiswa->nama ?? '' }}</td>
                                         <td>{{ $data->dosen->nip ?? '' }}</td>
                                         <td>{{ $data->dosen->nama ?? '' }}</td>
                                         <td>
@@ -95,7 +96,7 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Pengampu</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="{{route('pengampu.store')}}" method="post">
+                <form action="{{ route('pengampu.store') }}" method="post">
                     @csrf
                     <div class="modal-body" style="overflow-y: auto; max-height: 500px;">
                         <div class="form-group" hidden>
@@ -132,11 +133,21 @@
                             <label>Kode Matkul</label>
                             <select class="form-control select2" placeholder="Mata kuliah" name="kode_matkul">
                                 @foreach ($matkul as $matkul)
-                                    <option value="{{ $matkul->id }}">{{ $matkul->kode }} - {{ $matkul->nama }}
+                                    <option value="{{ $matkul->id }}">{{ $matkul->kode }} - {{ $matkul->nama }} - Semester {{$matkul->semester}}
                                     </option>
                                 @endforeach
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label>Golongan Kelas Mahasiswa</label>
+                            <select class="form-control select2" placeholder="Mata kuliah" name="id_golongan">
+                                @foreach ($golonganmahasiswa as $gol)
+                                    <option value="{{ $gol->id }}">{{ $gol->nama }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+
                         <div class="form-group">
                             <label for="">Status Dosen</label>
                             <select class="form-control select2" placeholder="Status Dosen" name="status_dosen">
@@ -205,21 +216,21 @@
                                 <input type="text" class="form-control" placeholder="id" name="id"
                                     value="{{ $data->id }}">
                             </div>
-                                <div class="form-group">
-                                    <label>Tahun Akademik</label>
-                                    <select class="form-control select2" placeholder="tahun akademik"
-                                        name="id_tahun_akademik">
-                                        @foreach ($datatahun as $dthn)
+                            <div class="form-group">
+                                <label>Tahun Akademik</label>
+                                <select class="form-control select2" placeholder="tahun akademik"
+                                    name="id_tahun_akademik">
+                                    @foreach ($datatahun as $dthn)
                                         <option value="{{ $dthn->id }}"
                                             {{ $data->id_tahun_akademik == $dthn->id ? 'selected' : '' }}>
                                             {{ $dthn->tahun_ajaran }} - {{ $dthn->keterangan }}
                                         </option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                                    @endforeach
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label>Prodi</label>
-                                <select class="form-control select2" placeholder="prodi" name="id_prodi" >
+                                <select class="form-control select2" placeholder="prodi" name="id_prodi">
                                     @foreach ($dataprodi as $prod)
                                         <option value="{{ $prod->id }}"
                                             {{ $data->id_prodi == $prod->id ? 'selected' : '' }}>
@@ -245,7 +256,18 @@
                                     @foreach ($datamatkul as $mtkl)
                                         <option value="{{ $mtkl->id }}"
                                             {{ $data->id_matkul == $mtkl->id ? 'selected' : '' }}>
-                                            {{ $mtkl->kode }} : {{ $mtkl->nama }}
+                                            {{ $mtkl->kode }} : {{ $mtkl->nama }} - Semester {{$matkul->semester}}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Golongan Kelas Mahasiswa</label>
+                                <select class="form-control select2" placeholder="Golongan Kelas Mahasiswa" name="id_golongan">
+                                    @foreach ($golonganmahasiswa as $gol)
+                                        <option value="{{ $gol->id }}"
+                                            {{ $data->id_golongan == $gol->id ? 'selected' : '' }}>
+                                            {{ $gol->nama }}
                                         </option>
                                     @endforeach
                                 </select>
